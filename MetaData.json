@@ -1,0 +1,6 @@
+{
+  "Name": "SelfControlledCaseSeriesModule",
+  "Version": "0.0.1",
+  "Dependencies": ["CohortGeneratorModule"],
+  "TablePrefix": "cm_"
+}
