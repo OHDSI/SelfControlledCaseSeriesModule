@@ -34,62 +34,51 @@ createCohortSharedResource <- function(cohortDefinitionSet) {
 }
 
 # Create SelfControlledCaseSeriesModule settings ---------------------------------------
-tcos <- createTargetComparatorOutcomes(
-  targetId = 1,
-  comparatorId = 2,
-  outcomes = list(
-    createOutcome(
-      outcomeId = 3,
-      priorOutcomeLookback = 30
-    )
-  ),
-  excludedCovariateConceptIds = c(1118084, 1124300)
+eso <- createExposuresOutcome(
+  exposures = list(createExposure(exposureId = 1)),
+  outcomeId = 3
 )
-targetComparatorOutcomesList <- list(tcos)
+esoList <- list(eso)
 
-covarSettings <- createDefaultCovariateSettings(addDescendantsToExclude = TRUE)
+getDbSccsDataArgs <- createGetDbSccsDataArgs()
 
-getDbCmDataArgs <- createGetDbCohortMethodDataArgs(
-  washoutPeriod = 183,
-  firstExposureOnly = TRUE,
-  removeDuplicateSubjects = "remove all",
-  covariateSettings = covarSettings
+createStudyPopulationArgs <- createCreateStudyPopulationArgs(firstOutcomeOnly = TRUE)
+
+covarExposureOfInt <- createEraCovariateSettings(
+  label = "Exposure of interest",
+  includeEraIds = "exposureId",
+  start = 1,
+  end = 0,
+  endAnchor = "era end",
+  exposureOfInterest = TRUE
 )
 
-createStudyPopArgs <- createCreateStudyPopulationArgs(
-  minDaysAtRisk = 1,
-  riskWindowStart = 0,
-  startAnchor = "cohort start",
-  riskWindowEnd = 30,
-  endAnchor = "cohort end"
-)
+createSccsIntervalDataArgs <- createCreateSccsIntervalDataArgs(eraCovariateSettings = covarExposureOfInt)
 
-fitOutcomeModelArgs <- createFitOutcomeModelArgs(modelType = "cox")
+fitSccsModelArgs <- createFitSccsModelArgs()
 
-cmAnalysis <- createCmAnalysis(
+sccsAnalysis <- createSccsAnalysis(
   analysisId = 1,
-  description = "No matching, simple outcome model",
-  getDbCohortMethodDataArgs = getDbCmDataArgs,
-  createStudyPopArgs = createStudyPopArgs,
-  fitOutcomeModel = TRUE,
-  fitOutcomeModelArgs = fitOutcomeModelArgs
+  description = "Simplest model",
+  getDbSccsDataArgs = getDbSccsDataArgs,
+  createStudyPopulationArgs = createStudyPopulationArgs,
+  createIntervalDataArgs = createSccsIntervalDataArgs,
+  fitSccsModelArgs = fitSccsModelArgs
 )
-
-cmAnalysisList <- list(cmAnalysis)
+sccsAnalysisList <- list(sccsAnalysis)
 
 analysesToExclude <- NULL
 
-
-cohortMethodModuleSpecifications <- createCohortMethodModuleSpecifications(
-  cmAnalysisList = cmAnalysisList,
-  targetComparatorOutcomesList = targetComparatorOutcomesList,
+sccsModuleSpecifications <- creatSelfControlledCaseSeriesModuleSpecifications(
+  sccsAnalysisList = sccsAnalysisList,
+  exposuresOutcomeList = esoList,
   analysesToExclude = analysesToExclude
 )
 
 # Module Settings Spec ----------------------------
 analysisSpecifications <- createEmptyAnalysisSpecificiations() %>%
   addSharedResources(createCohortSharedResource(getSampleCohortDefintionSet())) %>%
-  addModuleSpecifications(cohortMethodModuleSpecifications)
+  addModuleSpecifications(sccsModuleSpecifications)
 
 executionSettings <- Strategus::createExecutionSettings(connectionDetailsReference = "dummy",
                                                         workDatabaseSchema = "main",
@@ -100,7 +89,7 @@ executionSettings <- Strategus::createExecutionSettings(connectionDetailsReferen
                                                         minCellCount = 5)
 
 # Job Context ----------------------------
-module <- "CohortMethodModule"
+module <- "SelfControlledCaseSeriesModule"
 moduleIndex <- 1
 moduleExecutionSettings <- executionSettings
 moduleExecutionSettings$workSubFolder <- "dummy"

@@ -34,12 +34,12 @@ rCode <- ParallelLogger::createArgFunction(functionName = 'runSccsAnalyses',
                                                            "outcomeTable",
                                                            "customCovariateDatabaseSchema",
                                                            "customCovariateTable",
-                                                           "NestingCohortDatabaseSchema",
+                                                           "nestingCohortDatabaseSchema",
                                                            "nestingCohortTable",
                                                            "cdmVersion",
                                                            "outputFolder",
                                                            "sccsMultiThreadingSettings"),
-                                           newName = "createCohortMethodModuleSpecifications",
+                                           newName = "creatSelfControlledCaseSeriesModuleSpecifications",
                                            rCode = rCode)
 rCode <- rCode[-grep("^#'", rCode)]
 rCode <- rCode[-grep("class\\(analysis\\)", rCode)]

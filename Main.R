@@ -27,8 +27,8 @@ execute <- function(jobContext) {
     stop("Execution settings not found in job context")
   }
   
-  message("Executing cohort method")
-  multiThreadingSettings <- CohortMethod::createDefaultMultiThreadingSettings(parallel::detectCores())
+  message("Executing self-controlled case series")
+  sccsMultiThreadingSettings  <- SelfControlledCaseSeries::createDefaultSccsMultiThreadingSettings(parallel::detectCores())
   
   args <- jobContext$settings
   args$connectionDetails <- jobContext$moduleExecutionSettings$connectionDetails
@@ -38,19 +38,18 @@ execute <- function(jobContext) {
   args$outcomeDatabaseSchema <- jobContext$moduleExecutionSettings$workDatabaseSchema
   args$outcomeTable <- jobContext$moduleExecutionSettings$cohortTableNames$cohortTable
   args$outputFolder <- jobContext$moduleExecutionSettings$workSubFolder
-  args$multiThreadingSettings <- multiThreadingSettings
-  do.call(CohortMethod::runCmAnalyses, args)
+  args$sccsMultiThreadingSettings  <- sccsMultiThreadingSettings 
+  do.call(SelfControlledCaseSeries::runSccsAnalyses, args)
   
   exportFolder <- jobContext$moduleExecutionSettings$resultsSubFolder
-  CohortMethod::exportToCsv(outputFolder = jobContext$moduleExecutionSettings$workSubFolder,
-                            exportFolder = exportFolder,
-                            databaseId = jobContext$moduleExecutionSettings$databaseId,
-                            minCellCount = jobContext$moduleExecutionSettings$minCellCount,
-                            maxCores = parallel::detectCores())
+  SelfControlledCaseSeries::exportToCsv(outputFolder = jobContext$moduleExecutionSettings$workSubFolder,
+                                        exportFolder = exportFolder,
+                                        databaseId = jobContext$moduleExecutionSettings$databaseId,
+                                        minCellCount = jobContext$moduleExecutionSettings$minCellCount)
   unlink(file.path(exportFolder, sprintf("Results_%s.zip", jobContext$moduleExecutionSettings$databaseId)))
-
+  
   moduleInfo <- ParallelLogger::loadSettingsFromJson("MetaData.json")
-  resultsDataModel <- CohortGenerator::readCsv(file = system.file("csv", "resultsDataModelSpecification.csv", package = "CohortMethod"))
+  resultsDataModel <- CohortGenerator::readCsv(file = system.file("csv", "resultsDataModelSpecification.csv", package = "SelfControlledCaseSeries"))
   resultsDataModel <- resultsDataModel[file.exists(file.path(exportFolder, paste0(resultsDataModel$tableName, ".csv"))), ]
   if (any(!startsWith(resultsDataModel$tableName, moduleInfo$TablePrefix))) {
     stop("Table names do not have required prefix")

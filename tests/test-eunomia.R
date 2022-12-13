@@ -16,7 +16,7 @@ test_that("Run module", {
   source("Main.R")
   execute(jobContext)
   resultsFiles <- list.files(resultsfolder)
-  expect_true("cm_result.csv" %in% resultsFiles)
+  expect_true("sccs_result.csv" %in% resultsFiles)
 })
 
 unlink(workFolder)
