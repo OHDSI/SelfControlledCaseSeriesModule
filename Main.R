@@ -37,6 +37,10 @@ execute <- function(jobContext) {
   args$exposureTable <- jobContext$moduleExecutionSettings$cohortTableNames$cohortTable
   args$outcomeDatabaseSchema <- jobContext$moduleExecutionSettings$workDatabaseSchema
   args$outcomeTable <- jobContext$moduleExecutionSettings$cohortTableNames$cohortTable
+  args$nestingCohortDatabaseSchema <- jobContext$moduleExecutionSettings$workDatabaseSchema
+  args$nestingCohortTable  <- jobContext$moduleExecutionSettings$cohortTableNames$cohortTable
+  args$customCovariateDatabaseSchema <- jobContext$moduleExecutionSettings$workDatabaseSchema
+  args$customCovariateTable <- jobContext$moduleExecutionSettings$cohortTableNames$cohortTable
   args$outputFolder <- jobContext$moduleExecutionSettings$workSubFolder
   args$sccsMultiThreadingSettings  <- sccsMultiThreadingSettings 
   do.call(SelfControlledCaseSeries::runSccsAnalyses, args)
