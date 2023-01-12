@@ -413,7 +413,7 @@
 		},
 		"SqlRender" : {
 			"Package" : "SqlRender",
-			"Version" : "1.11.0",
+			"Version" : "1.11.1",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -455,13 +455,7 @@
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "DatabaseConnector",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "beta_6.0.0"
-		},
-		"DatabaseConnector" : {
-			"Package" : "DatabaseConnector",
-			"Version" : "6.0.0",
-			"Source" : "Repository",
-			"Repository" : "CRAN"
+			"RemoteRef" : "c395aba98fd8e8d9660f20d7cd9858d6ed71579e"
 		},
 		"EmpiricalCalibration" : {
 			"Package" : "EmpiricalCalibration",
@@ -579,19 +573,19 @@
 		},
 		"renv" : {
 			"Package" : "renv",
-			"Version" : "0.16.0",
+			"Version" : "0.15.5",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"SelfControlledCaseSeries" : {
 			"Package" : "SelfControlledCaseSeries",
-			"Version" : "4.0.0",
+			"Version" : "4.1.0",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "SelfControlledCaseSeries",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v4"
+			"RemoteRef" : "v4.1.0"
 		},
 		"Eunomia" : {
 			"Package" : "Eunomia",
