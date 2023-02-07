@@ -579,13 +579,13 @@
 		},
 		"SelfControlledCaseSeries" : {
 			"Package" : "SelfControlledCaseSeries",
-			"Version" : "4.1.0",
+			"Version" : "4.2.0",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "SelfControlledCaseSeries",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v4.1.0"
+			"RemoteRef" : "80925c99b1fd7bc4ae834aa6243bb9b4937ac9cd"
 		},
 		"Eunomia" : {
 			"Package" : "Eunomia",
