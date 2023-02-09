@@ -1,3 +1,11 @@
+SelfControlledCaseSeriesModule 0.0.4
+====================================
+
+Changes
+
+1. Upgrading `SelfControlledCaseSeries` version. Setting `sccs_spline.knot_month` to a float in specifications.
+
+
 SelfControlledCaseSeriesModule 0.0.3
 ====================================
 
