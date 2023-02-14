@@ -1,3 +1,10 @@
+SelfControlledCaseSeriesModule 0.0.5
+====================================
+
+Changes
+
+1. Add missing `renv/settings.dcf` file.
+
 SelfControlledCaseSeriesModule 0.0.4
 ====================================
 
