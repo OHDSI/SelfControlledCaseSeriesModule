@@ -4,14 +4,15 @@ library(SelfControlledCaseSeries)
 creatSelfControlledCaseSeriesModuleSpecifications <- function(sccsAnalysisList,
                                                               exposuresOutcomeList,
                                                               analysesToExclude = NULL,
-                                                              combineDataFetchAcrossOutcomes = FALSE) {
+                                                              combineDataFetchAcrossOutcomes = FALSE,
+                                                              sccsDiagnosticThresholds = createSccsDiagnosticThresholds()) {
   analysis <- list()
   for (name in names(formals(creatSelfControlledCaseSeriesModuleSpecifications))) {
     analysis[[name]] <- get(name)
   }
 
   specifications <- list(module = "SelfControlledCaseSeriesModule",
-                         version = "0.0.5",
+                         version = "0.1.0",
                          remoteRepo = "github.com",
                          remoteUsername = "ohdsi",
                          settings = analysis)

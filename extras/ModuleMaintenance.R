@@ -40,7 +40,9 @@ rCode <- ParallelLogger::createArgFunction(functionName = 'runSccsAnalyses',
                                                            "outputFolder",
                                                            "sccsMultiThreadingSettings"),
                                            newName = "creatSelfControlledCaseSeriesModuleSpecifications",
+                                           addArgs = list(sccsDiagnosticThresholds = "createSccsDiagnosticThresholds()"),
                                            rCode = rCode)
+rCode <- gsub("\"", "", rCode)
 rCode <- rCode[-grep("^#'", rCode)]
 rCode <- rCode[-grep("class\\(analysis\\)", rCode)]
 rCode[grep("return\\(analysis\\)", rCode)]  <- sprintf("

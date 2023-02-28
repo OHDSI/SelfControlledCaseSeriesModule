@@ -80,13 +80,13 @@ analysisSpecifications <- createEmptyAnalysisSpecificiations() %>%
   addSharedResources(createCohortSharedResource(getSampleCohortDefintionSet())) %>%
   addModuleSpecifications(sccsModuleSpecifications)
 
-executionSettings <- Strategus::createExecutionSettings(connectionDetailsReference = "dummy",
-                                                        workDatabaseSchema = "main",
-                                                        cdmDatabaseSchema = "main",
-                                                        cohortTableNames = CohortGenerator::getCohortTableNames(cohortTable = "cohort"),
-                                                        workFolder = "dummy",
-                                                        resultsFolder = "dummy",
-                                                        minCellCount = 5)
+executionSettings <- Strategus::createCdmExecutionSettings(connectionDetailsReference = "dummy",
+                                                           workDatabaseSchema = "main",
+                                                           cdmDatabaseSchema = "main",
+                                                           cohortTableNames = CohortGenerator::getCohortTableNames(cohortTable = "cohort"),
+                                                           workFolder = "dummy",
+                                                           resultsFolder = "dummy",
+                                                           minCellCount = 5)
 
 # Job Context ----------------------------
 module <- "SelfControlledCaseSeriesModule"

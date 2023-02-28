@@ -43,13 +43,15 @@ execute <- function(jobContext) {
   args$customCovariateTable <- jobContext$moduleExecutionSettings$cohortTableNames$cohortTable
   args$outputFolder <- jobContext$moduleExecutionSettings$workSubFolder
   args$sccsMultiThreadingSettings  <- sccsMultiThreadingSettings 
+  args$sccsDiagnosticThresholds  <- NULL
   do.call(SelfControlledCaseSeries::runSccsAnalyses, args)
   
   exportFolder <- jobContext$moduleExecutionSettings$resultsSubFolder
   SelfControlledCaseSeries::exportToCsv(outputFolder = jobContext$moduleExecutionSettings$workSubFolder,
                                         exportFolder = exportFolder,
                                         databaseId = jobContext$moduleExecutionSettings$databaseId,
-                                        minCellCount = jobContext$moduleExecutionSettings$minCellCount)
+                                        minCellCount = jobContext$moduleExecutionSettings$minCellCount,
+                                        sccsDiagnosticThresholds = jobContext$settings$sccsDiagnosticThresholds)
   unlink(file.path(exportFolder, sprintf("Results_%s.zip", jobContext$moduleExecutionSettings$databaseId)))
   
   moduleInfo <- ParallelLogger::loadSettingsFromJson("MetaData.json")

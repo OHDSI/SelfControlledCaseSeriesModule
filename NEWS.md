@@ -1,3 +1,11 @@
+SelfControlledCaseSeriesModule 0.1.0
+====================================
+
+Changes
+
+1. Updating `SelfControlledCaseSeries`. Now exposing diagnostics thresholds.
+
+
 SelfControlledCaseSeriesModule 0.0.5
 ====================================
 
