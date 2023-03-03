@@ -1,3 +1,10 @@
+SelfControlledCaseSeriesModule 0.1.1
+====================================
+
+Changes
+
+1. Updating `SelfControlledCaseSeries`. Changes `observed_days` field to BIGINT.
+
 SelfControlledCaseSeriesModule 0.1.0
 ====================================
 
