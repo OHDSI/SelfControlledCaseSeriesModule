@@ -1,3 +1,10 @@
+SelfControlledCaseSeriesModule 0.1.2
+====================================
+
+Changes
+
+1. Updating `SelfControlledCaseSeries`. Fixes MDRR edge case when all observed time is exposed.
+
 SelfControlledCaseSeriesModule 0.1.1
 ====================================
 
