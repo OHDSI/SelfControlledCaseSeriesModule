@@ -585,7 +585,7 @@
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "SelfControlledCaseSeries",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "a36934df882bc7442dd99a9d06f91bfc3965dc6c"
+			"RemoteRef" : "15918616814b88137f82bf2aa9986e1dcdf39e74"
 		},
 		"Eunomia" : {
 			"Package" : "Eunomia",

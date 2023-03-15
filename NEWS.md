@@ -1,3 +1,10 @@
+SelfControlledCaseSeriesModule 0.1.3
+====================================
+
+Changes
+
+1. Updating `SelfControlledCaseSeries`. Not ignoring 'allowRegularization' in calendar time settings.
+
 SelfControlledCaseSeriesModule 0.1.2
 ====================================
 
