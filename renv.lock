@@ -1007,7 +1007,7 @@
 		},
 		"EvidenceSynthesis" : {
 			"Package" : "EvidenceSynthesis",
-			"Version" : "0.4.0",
+			"Version" : "0.5.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -1215,13 +1215,13 @@
 		},
 		"FeatureExtraction" : {
 			"Package" : "FeatureExtraction",
-			"Version" : "3.2.0",
+			"Version" : "3.3.0",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "FeatureExtraction",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v3.2.0"
+			"RemoteRef" : "v3.3.0"
 		},
 		"CohortGenerator" : {
 			"Package" : "CohortGenerator",
@@ -1245,13 +1245,13 @@
 		},
 		"PatientLevelPrediction" : {
 			"Package" : "PatientLevelPrediction",
-			"Version" : "6.3.1",
+			"Version" : "6.3.3",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "PatientLevelPrediction",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v6.3.1"
+			"RemoteRef" : "v6.3.3"
 		},
 		"ResultModelManager" : {
 			"Package" : "ResultModelManager",
@@ -1295,13 +1295,13 @@
 		},
 		"CohortDiagnostics" : {
 			"Package" : "CohortDiagnostics",
-			"Version" : "3.1.2",
+			"Version" : "3.2.3",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "CohortDiagnostics",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v3.1.2"
+			"RemoteRef" : "v3.2.3"
 		},
 		"CohortExplorer" : {
 			"Package" : "CohortExplorer",
@@ -1315,13 +1315,13 @@
 		},
 		"CohortMethod" : {
 			"Package" : "CohortMethod",
-			"Version" : "4.2.3",
+			"Version" : "5.0.0",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "CohortMethod",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v4.2.3"
+			"RemoteRef" : "v5.0.0"
 		},
 		"DataQualityDashboard" : {
 			"Package" : "DataQualityDashboard",
@@ -1431,7 +1431,7 @@
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "SelfControlledCaseSeries",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v4.1.0"
+			"RemoteRef" : "v4.2.0"
 		},
 		"SelfControlledCohort" : {
 			"Package" : "SelfControlledCohort",
@@ -1462,6 +1462,16 @@
 			"RemoteRepo" : "Hades",
 			"RemoteUsername" : "ohdsi",
 			"RemoteRef" : "v1.11.0"
-		}
+		},
+		"CohortIncidence" : {
+			"Package" : "CohortIncidence",
+			"Version" : "3.1.5",
+			"Source" : "GitHub",
+			"RemoteType" : "github",
+			"RemoteHost" : "api.github.com",
+			"RemoteRepo" : "CohortIncidence",
+			"RemoteUsername" : "ohdsi",
+			"RemoteRef" : "v3.1.5"
+		}		
 	}
 }
