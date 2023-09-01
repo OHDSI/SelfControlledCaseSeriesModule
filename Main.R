@@ -65,3 +65,36 @@ execute <- function(jobContext) {
                             warnOnFileNameCaseMismatch = FALSE)
 }
 
+createDataModelSchema <- function(jobContext) {
+  checkmate::assert_class(jobContext$moduleExecutionSettings$resultsConnectionDetails, "ConnectionDetails")
+  checkmate::assert_string(jobContext$moduleExecutionSettings$resultsDatabaseSchema)
+  connectionDetails <- jobContext$moduleExecutionSettings$resultsConnectionDetails
+  moduleInfo <- getModuleInfo()
+  tablePrefix <- moduleInfo$TablePrefix
+  resultsDatabaseSchema <- jobContext$moduleExecutionSettings$resultsDatabaseSchema
+  resultsDataModel <- ResultModelManager::loadResultsDataModelSpecifications(
+    filePath = system.file("csv", "resultsDataModelSpecification.csv", package = "SelfControlledCaseSeries")
+  )
+  resultsDataModel$tableName <- paste0(tablePrefix, resultsDataModel$tableName)
+  sql <- ResultModelManager::generateSqlSchema(
+    schemaDefinition = resultsDataModel
+  )
+  sql <- SqlRender::render(
+    sql = sql,
+    database_schema = resultsDatabaseSchema
+  )
+  connection <- DatabaseConnector::connect(
+    connectionDetails = connectionDetails
+  )
+  on.exit(DatabaseConnector::disconnect(connection))
+  DatabaseConnector::executeSql(
+    connection = connection,
+    sql = sql
+  )
+}
+
+# Private methods -------------------------
+getModuleInfo <- function() {
+  checkmate::assert_file_exists("MetaData.json")
+  return(ParallelLogger::loadSettingsFromJson("MetaData.json"))
+}
