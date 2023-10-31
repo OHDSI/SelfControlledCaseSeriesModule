@@ -401,13 +401,13 @@
     },
     "SelfControlledCaseSeries": {
       "Package": "SelfControlledCaseSeries",
-      "Version": "4.2.0",
+      "Version": "5.0.0",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteRepo": "SelfControlledCaseSeries",
       "RemoteUsername": "ohdsi",
-      "RemoteRef": "v4.2.0"
+      "RemoteRef": "94ac999d73fbaeaf666d4d4cb2094b7a435c8b1f"
     },
     "SelfControlledCohort": {
       "Package": "SelfControlledCohort",
@@ -437,7 +437,7 @@
     },
     "SqlRender": {
       "Package": "SqlRender",
-      "Version": "1.15.2",
+      "Version": "1.16.1",
       "Source": "Repository",
       "Repository": "CRAN"
     },

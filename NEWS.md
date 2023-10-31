@@ -1,3 +1,8 @@
+SelfControlledCaseSeriesModule 0.3.0
+====================================
+
+- Switching to (currently unreleased) SelfControledCaseSeries v5.0.0. (Required updating SqlRender to v1.16.1)
+
 SelfControlledCaseSeriesModule 0.2.0
 ====================================
 
