@@ -437,7 +437,7 @@
     },
     "SqlRender": {
       "Package": "SqlRender",
-      "Version": "1.15.2",
+      "Version": "1.16.1",
       "Source": "Repository",
       "Repository": "CRAN"
     },
