@@ -1,3 +1,8 @@
+SelfControlledCaseSeriesModule 0.3.0
+====================================
+
+- Switching to (currently unreleased) SelfControledCaseSeries v5.0.0.
+
 SelfControlledCaseSeriesModule 0.2.0
 ====================================
 
