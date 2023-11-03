@@ -125,7 +125,7 @@
     },
     "Cyclops": {
       "Package": "Cyclops",
-      "Version": "3.2.1",
+      "Version": "3.4.0",
       "Source": "Repository",
       "Repository": "CRAN"
     },
@@ -401,13 +401,13 @@
     },
     "SelfControlledCaseSeries": {
       "Package": "SelfControlledCaseSeries",
-      "Version": "5.0.0",
+      "Version": "5.1.0",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteRepo": "SelfControlledCaseSeries",
       "RemoteUsername": "ohdsi",
-      "RemoteRef": "94ac999d73fbaeaf666d4d4cb2094b7a435c8b1f"
+      "RemoteRef": "5a036bbf29040b616e191394da210623a374d65a"
     },
     "SelfControlledCohort": {
       "Package": "SelfControlledCohort",
@@ -1222,7 +1222,7 @@
     },
     "rlang": {
       "Package": "rlang",
-      "Version": "1.1.0",
+      "Version": "1.1.1",
       "Source": "Repository",
       "Repository": "CRAN"
     },
