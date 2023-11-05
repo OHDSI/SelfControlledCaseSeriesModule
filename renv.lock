@@ -407,7 +407,7 @@
       "RemoteHost": "api.github.com",
       "RemoteRepo": "SelfControlledCaseSeries",
       "RemoteUsername": "ohdsi",
-      "RemoteRef": "6c23d6f39dec56ac955f6752bd148f8a86c545bc"
+      "RemoteRef": "85d3a9374a5129c6361aaeb9046361999f70a0ce"
     },
     "SelfControlledCohort": {
       "Package": "SelfControlledCohort",
