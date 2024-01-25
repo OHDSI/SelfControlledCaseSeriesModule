@@ -49,7 +49,7 @@ createStudyPopulationArgs <- createCreateStudyPopulationArgs(firstOutcomeOnly = 
 covarExposureOfInt <- createEraCovariateSettings(
   label = "Exposure of interest",
   includeEraIds = "exposureId",
-  start = 1,
+  start = 0,
   end = 0,
   endAnchor = "era end",
   exposureOfInterest = TRUE
