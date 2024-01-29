@@ -1,3 +1,7 @@
+SelfControlledCaseSeriesModule 0.4.1
+====================================
+- Switching to newer version of SelfControledCaseSeries 5.1.1
+
 SelfControlledCaseSeriesModule 0.4.0
 ====================================
 - Using renv project profiles to manage core packages required for module execution vs. those that are needed for development purposes.
