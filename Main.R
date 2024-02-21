@@ -86,24 +86,10 @@ createDataModelSchema <- function(jobContext) {
   resultsDatabaseSchema <- jobContext$moduleExecutionSettings$resultsDatabaseSchema
   # Workaround for issue https://github.com/tidyverse/vroom/issues/519:
   readr::local_edition(1)
-  resultsDataModel <- ResultModelManager::loadResultsDataModelSpecifications(
-    filePath = system.file("csv", "resultsDataModelSpecification.csv", package = "SelfControlledCaseSeries")
-  )
-  sql <- ResultModelManager::generateSqlSchema(
-    schemaDefinition = resultsDataModel
-  )
-  sql <- SqlRender::render(
-    sql = sql,
-    database_schema = resultsDatabaseSchema
-  )
-  connection <- DatabaseConnector::connect(
-    connectionDetails = connectionDetails
-  )
-  on.exit(DatabaseConnector::disconnect(connection))
-  DatabaseConnector::executeSql(
-    connection = connection,
-    sql = sql
-  )
+  moduleInfo <- getModuleInfo()
+  SelfControlledCaseSeries::createResultsDataModel(connectionDetails = connectionDetails,
+                                                   resultsDatabaseSchema,
+                                                   tablePrefix = moduleInfo$tablePrefix)
 }
 
 # Private methods -------------------------
