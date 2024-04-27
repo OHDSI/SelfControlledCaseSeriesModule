@@ -236,8 +236,8 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "OHDSI",
       "RemoteRepo": "SelfControlledCaseSeries",
-      "RemoteRef": "8864e92cba8a4b903a56144ad4fcb4538cefce1d",
-      "RemoteSha": "8864e92cba8a4b903a56144ad4fcb4538cefce1d"
+      "RemoteRef": "685553eb11c77ddfa28e0b32ec5fc508795629e9",
+      "RemoteSha": "685553eb11c77ddfa28e0b32ec5fc508795629e9"
     },
     "SqlRender": {
       "Package": "SqlRender",

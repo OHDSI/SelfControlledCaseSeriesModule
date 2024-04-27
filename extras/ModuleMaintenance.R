@@ -90,7 +90,7 @@ updatedPackages <- list(
     Source = "Repository",
     Repository = "CRAN"
   ),
-  "OHDSI/SelfControlledCaseSeries@8864e92cba8a4b903a56144ad4fcb4538cefce1d",
+  "OHDSI/SelfControlledCaseSeries@685553eb11c77ddfa28e0b32ec5fc508795629e9",
   "OHDSI/CohortGenerator@v0.8.1",
   "OHDSI/ResultModelManager@v0.5.6"
 )
