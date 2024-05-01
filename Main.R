@@ -86,9 +86,9 @@ createDataModelSchema <- function(jobContext) {
   resultsDatabaseSchema <- jobContext$moduleExecutionSettings$resultsDatabaseSchema
   # Workaround for issue https://github.com/tidyverse/vroom/issues/519:
   readr::local_edition(1)
-  # Note: not using table prefix here since the 
-  # SCCS results model is already using the "sccs_"
-  # table prefix
+  # Note: not passing the tablePrefix argument to
+  # createResultsDataModel since the SCCS results 
+  # model already contains the "sccs_" table prefix
   SelfControlledCaseSeries::createResultsDataModel(
     connectionDetails = connectionDetails,
     databaseSchema = resultsDatabaseSchema,
