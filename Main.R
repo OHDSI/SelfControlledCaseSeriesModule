@@ -84,26 +84,8 @@ createDataModelSchema <- function(jobContext) {
   checkmate::assert_string(jobContext$moduleExecutionSettings$resultsDatabaseSchema)
   connectionDetails <- jobContext$moduleExecutionSettings$resultsConnectionDetails
   resultsDatabaseSchema <- jobContext$moduleExecutionSettings$resultsDatabaseSchema
-  # Workaround for issue https://github.com/tidyverse/vroom/issues/519:
-  readr::local_edition(1)
-  resultsDataModel <- ResultModelManager::loadResultsDataModelSpecifications(
-    filePath = system.file("csv", "resultsDataModelSpecification.csv", package = "SelfControlledCaseSeries")
-  )
-  sql <- ResultModelManager::generateSqlSchema(
-    schemaDefinition = resultsDataModel
-  )
-  sql <- SqlRender::render(
-    sql = sql,
-    database_schema = resultsDatabaseSchema
-  )
-  connection <- DatabaseConnector::connect(
-    connectionDetails = connectionDetails
-  )
-  on.exit(DatabaseConnector::disconnect(connection))
-  DatabaseConnector::executeSql(
-    connection = connection,
-    sql = sql
-  )
+  SelfControlledCaseSeries::createResultsDataModel(connectionDetails = jobContext$moduleExecutionSettings$resultsConnectionDetails,
+                                                   jobContext$moduleExecutionSettings$resultsDatabaseSchema)
 }
 
 # Private methods -------------------------
