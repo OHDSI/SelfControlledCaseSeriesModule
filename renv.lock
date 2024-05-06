@@ -43,21 +43,13 @@
     "Cyclops": {
       "Package": "Cyclops",
       "Version": "3.4.0",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "Andromeda",
-        "Matrix",
-        "R",
-        "Rcpp",
-        "RcppEigen",
-        "bit64",
-        "dplyr",
-        "methods",
-        "rlang",
-        "survival"
-      ],
-      "Hash": "fccfbd1f5cf6ab5bbba76a3473eed06e"
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "OHDSI",
+      "RemoteRepo": "Cyclops",
+      "RemoteRef": "09d1023c671a9b678ff64b99cbe7b6ffffc09955",
+      "RemoteSha": "09d1023c671a9b678ff64b99cbe7b6ffffc09955"
     },
     "DBI": {
       "Package": "DBI",
@@ -236,8 +228,8 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "OHDSI",
       "RemoteRepo": "SelfControlledCaseSeries",
-      "RemoteRef": "685553eb11c77ddfa28e0b32ec5fc508795629e9",
-      "RemoteSha": "685553eb11c77ddfa28e0b32ec5fc508795629e9"
+      "RemoteRef": "6d71bca373d0736bff1cd758ce5b5baf56dbc3ea",
+      "RemoteSha": "6d71bca373d0736bff1cd758ce5b5baf56dbc3ea"
     },
     "SqlRender": {
       "Package": "SqlRender",
