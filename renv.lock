@@ -222,14 +222,14 @@
     },
     "SelfControlledCaseSeries": {
       "Package": "SelfControlledCaseSeries",
-      "Version": "5.1.1",
+      "Version": "5.2.0",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "OHDSI",
       "RemoteRepo": "SelfControlledCaseSeries",
-      "RemoteRef": "6d71bca373d0736bff1cd758ce5b5baf56dbc3ea",
-      "RemoteSha": "6d71bca373d0736bff1cd758ce5b5baf56dbc3ea"
+      "RemoteRef": "8ad50eb17668bc8bd0f837d87f0b0ff0f9ea4f59",
+      "RemoteSha": "8ad50eb17668bc8bd0f837d87f0b0ff0f9ea4f59"
     },
     "SqlRender": {
       "Package": "SqlRender",

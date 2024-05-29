@@ -12,7 +12,7 @@ creatSelfControlledCaseSeriesModuleSpecifications <- function(sccsAnalysisList,
   }
 
   specifications <- list(module = "SelfControlledCaseSeriesModule",
-                         version = "0.4.2-5",
+                         version = "0.5.0-1",
                          remoteRepo = "github.com",
                          remoteUsername = "ohdsi",
                          settings = analysis)
