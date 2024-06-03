@@ -1,3 +1,7 @@
+SelfControlledCaseSeriesModule 0.5.0
+====================================
+- Switching to newer version of SelfControledCaseSeries v5.2.0
+
 SelfControlledCaseSeriesModule 0.4.1
 ====================================
 - Switching to newer version of SelfControledCaseSeries 5.1.1

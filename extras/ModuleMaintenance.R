@@ -90,11 +90,22 @@ updatedPackages <- list(
     Source = "Repository",
     Repository = "CRAN"
   ),
-  "OHDSI/SelfControlledCaseSeries@6d71bca373d0736bff1cd758ce5b5baf56dbc3ea",
-  "OHDSI/Cyclops@09d1023c671a9b678ff64b99cbe7b6ffffc09955",
-  
+  list(
+    Package = "SqlRender",
+    Version = "1.18.0",
+    Source = "Repository",
+    Repository = "CRAN"
+  ),
+  list(
+    Package = "FeatureExtraction",
+    Version = "3.5.2",
+    Source = "Repository",
+    Repository = "CRAN"
+  ),
+  "OHDSI/SelfControlledCaseSeries@v5.2.0",
   "OHDSI/CohortGenerator@v0.8.1",
-  "OHDSI/ResultModelManager@v0.5.6"
+  "OHDSI/ResultModelManager@v0.5.7",
+  "OHDSI/Cyclops@v3.4.1"
 )
 updatedDevPackages <- list(
   list(
@@ -103,7 +114,12 @@ updatedDevPackages <- list(
     Source = "Repository",
     Repository = "CRAN"
   ),
-  "OHDSI/Eunomia@v1.0.2"
+  list(
+    Package = "Eunomia",
+    Version = "2.0.0",
+    Source = "Repository",
+    Repository = "CRAN"
+  )
 )
 
 # Deactivates and cleans the project to remove any/all old references
@@ -170,17 +186,3 @@ projDevVsProjLockFile[!is.na(projDevVsProjLockFile$lockfile2Version) & projDevVs
 # lock file. Only replace the version in the target
 # lock file if the version is newer. Provide a warning
 # for those packages that could not be evaluated by
-# version
-Strategus::syncLockFile(
-  sourceOfTruthLockFileName = hadesWideLockFileName,
-  targetLockFileName = "renv/profiles/dev/renv.lock"
-)
-
-Strategus::syncLockFile(
-  sourceOfTruthLockFileName = "renv/profiles/dev/renv.lock",
-  targetLockFileName = "renv.lock"
-)
-
-# NOTE: Use the compare functions above to verify the files are in sync
-# and add any dependencies that could not be synced automatically to the
-# updatedPackages and updatedDevPackages respectively.
