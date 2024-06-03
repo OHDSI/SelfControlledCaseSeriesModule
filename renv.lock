@@ -42,22 +42,14 @@
     },
     "Cyclops": {
       "Package": "Cyclops",
-      "Version": "3.4.0",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "Andromeda",
-        "Matrix",
-        "R",
-        "Rcpp",
-        "RcppEigen",
-        "bit64",
-        "dplyr",
-        "methods",
-        "rlang",
-        "survival"
-      ],
-      "Hash": "fccfbd1f5cf6ab5bbba76a3473eed06e"
+      "Version": "3.4.1",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "OHDSI",
+      "RemoteRepo": "Cyclops",
+      "RemoteRef": "v3.4.1",
+      "RemoteSha": "d674198e8596a05b1a3799db92c8da4b04fed512"
     },
     "DBI": {
       "Package": "DBI",
@@ -107,6 +99,12 @@
         "rlang"
       ],
       "Hash": "909c2b66ab1d9dd69a7bbef7e4195e14"
+    },
+    "FeatureExtraction": {
+      "Package": "FeatureExtraction",
+      "Version": "3.5.2",
+      "Source": "Repository",
+      "Repository": "CRAN"
     },
     "MASS": {
       "Package": "MASS",
@@ -219,37 +217,31 @@
     },
     "ResultModelManager": {
       "Package": "ResultModelManager",
-      "Version": "0.5.6",
+      "Version": "0.5.7",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "OHDSI",
       "RemoteRepo": "ResultModelManager",
-      "RemoteRef": "v0.5.6",
-      "RemoteSha": "3033804e5af77b8b8dacda67c4d6853731e3641b"
+      "RemoteRef": "v0.5.7",
+      "RemoteSha": "1cff4f0b1856b4c9fef662d3a6fb88e3c3005760"
     },
     "SelfControlledCaseSeries": {
       "Package": "SelfControlledCaseSeries",
-      "Version": "5.1.1",
+      "Version": "5.2.0",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "OHDSI",
       "RemoteRepo": "SelfControlledCaseSeries",
-      "RemoteRef": "v5.1.1",
-      "RemoteSha": "a4a281a8c124a1b2af1f7261641d226ed73f7b70"
+      "RemoteRef": "v5.2.0",
+      "RemoteSha": "32429b7c32489a57f087a04f9b2b8fc4eb40162b"
     },
     "SqlRender": {
       "Package": "SqlRender",
-      "Version": "1.16.1",
+      "Version": "1.18.0",
       "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "checkmate",
-        "rJava",
-        "rlang"
-      ],
-      "Hash": "94d9cae91bbd8aed211bea82aff7cf77"
+      "Repository": "CRAN"
     },
     "askpass": {
       "Package": "askpass",
