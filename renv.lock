@@ -42,14 +42,13 @@
     },
     "Cyclops": {
       "Package": "Cyclops",
-      "Version": "3.4.1",
+      "Version": "3.4.0",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "OHDSI",
       "RemoteRepo": "Cyclops",
-      "RemoteRef": "v3.4.1",
-      "RemoteSha": "d674198e8596a05b1a3799db92c8da4b04fed512"
+      "RemoteRef": "v3.4.0"
     },
     "DBI": {
       "Package": "DBI",
