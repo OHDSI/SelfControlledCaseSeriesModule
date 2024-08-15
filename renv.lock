@@ -291,15 +291,15 @@
     },
     "SelfControlledCaseSeries": {
       "Package": "SelfControlledCaseSeries",
-      "Version": "5.2.3",
+      "Version": "5.3.0",
       "Source": "GitHub",
       "Remotes": "ohdsi/ResultModelManager",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteRepo": "SelfControlledCaseSeries",
       "RemoteUsername": "OHDSI",
-      "RemoteRef": "develop",
-      "RemoteSha": "cc2652e9be5e5286a75686f7840e853973d27542",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "c8ea06494f39064dc9d126fd08e197ba49f25b49",
       "Requirements": [
         "Andromeda",
         "Cyclops",
@@ -323,7 +323,7 @@
         "utils",
         "zip"
       ],
-      "Hash": "2bc984057f142cfed15430c3f162aae9"
+      "Hash": "cf907ea0ea46d4c64064b03bd0e66eab"
     },
     "SqlRender": {
       "Package": "SqlRender",
@@ -1225,7 +1225,7 @@
     },
     "vroom": {
       "Package": "vroom",
-      "Version": "1.6.3",
+      "Version": "1.6.5",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -1247,7 +1247,7 @@
         "vctrs",
         "withr"
       ],
-      "Hash": "8318e64ffb3a70e652494017ec455561"
+      "Hash": "390f9315bc0025be03012054103d227c"
     },
     "withr": {
       "Package": "withr",
