@@ -1,6 +1,6 @@
 {
   "Name": "SelfControlledCaseSeriesModule",
-  "Version": "5.3.0",
+  "Version": "5.3.0-pre",
   "Dependencies": ["CohortGeneratorModule"],
   "TablePrefix": "sccs_"
 }
